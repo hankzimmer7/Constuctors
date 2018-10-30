@@ -62,13 +62,15 @@ public class BankAccount {
     //Methods for depositing and withdrawing funds
     public void deposit(double amount) {
         this.balance += amount;
+        System.out.println("Deposited $" + amount + " into " + this.customerName + "'s bank account. The balance is now $" + this.balance);
     }
 
     public void withdraw(double amount) {
         if (balance >= amount) {
             this.balance -= amount;
+            System.out.println("Withdrew $" + amount + " from " + this.customerName + "'s bank account. The balance is now $" + this.balance);
         } else {
-            System.out.println("Insufficient balance");
+            System.out.println("Insufficient funds for withdrawal of $" + amount + " from " + this.customerName + "'s account. The balance is only " + this.balance + ".");
         }
     }
 }
