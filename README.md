@@ -1,2 +1,2 @@
 # Constructors
-Uses a constructor for a Bank Account class
+Uses constructors for a Bank Account class and a VIP customer class
