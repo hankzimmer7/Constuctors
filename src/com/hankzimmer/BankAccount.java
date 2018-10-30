@@ -8,7 +8,29 @@ public class BankAccount {
     private String phoneNumber;
     private String type;
 
+    //Constructors
+
+    //Constructor which update all values
+    public BankAccount(String number, double balance, String customerName, String email, String phoneNumber) {
+        this.number = number;
+        this.balance = balance;
+        this.customerName = customerName;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+    }
+
+    //Default constructor with all default values
+    public BankAccount() {
+        this("56789", 0.0, "Default name", "Default email", "Default phone");
+    }
+
+    //Constructor with default account number and balance
+    public BankAccount(String customerName, String email, String phoneNumber) {
+        this("99999", 0.0, customerName, email, phoneNumber);
+    }
+
     //Set methods
+
     public void setNumber(String number) {
         this.number = number;
     }

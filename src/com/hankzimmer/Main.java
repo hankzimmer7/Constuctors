@@ -3,18 +3,19 @@ package com.hankzimmer;
 public class Main {
 
     public static void main(String[] args) {
-        BankAccount myAccount = new BankAccount();
-        myAccount.setCustomerName("Hank");
-        myAccount.setNumber("12345678");
-        myAccount.setBalance(85000d);
-        myAccount.setEmail("hank@gmail.com");
-        myAccount.setPhoneNumber("619-271-1928");
+
+        //Create bank accounts
+        BankAccount myAccount = new BankAccount("12345678",85000,"Hank","hank@gmail.com","619-271-1928");
+        BankAccount defaultAccount = new BankAccount();
         System.out.println(myAccount.getCustomerName() + "'s bank account (Account #" + myAccount.getNumber() + ") initially has a balance of $" + myAccount.getBalance());
+        System.out.println(defaultAccount.getCustomerName() + "'s bank account (Account #" + defaultAccount.getNumber() + ") initially has a balance of $" + defaultAccount.getBalance());
 
-        int depositAmount = 10000;
-        myAccount.deposit(depositAmount);
+        //Test the deposit and withdrawal methods
+        myAccount.deposit(10000);
+        myAccount.withdraw(32000);
 
-        int withdrawalAmount = 32000;
-        myAccount.withdraw(withdrawalAmount);
+        //Create a VIP customer
+        VipCustomer charlotte = new VipCustomer("Charlotte", "charlotte@email.com");
+        System.out.println("Added a new VIP customer named " + charlotte.getName() + " with a credit limit of $" + charlotte.getCreditLimit() + " and an email address of " + charlotte.getEmail());
     }
 }

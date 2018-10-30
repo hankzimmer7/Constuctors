@@ -1,2 +1,2 @@
 # Constructors
-Constructors example
+Uses a constructor for a Bank Account class
